@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PoE2 Rumor Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="./style.css?v=__BUILD__">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <div class="site-title">
+            <span class="site-mark">⚒</span>
+            <h1>PoE2 Rumor Tracker</h1>
+        </div>
+        <nav class="site-nav">
+            <a href="#" id="nav-tracker" class="active">Tracker</a>
+            <a href="#settings" id="nav-settings">Settings</a>
+        </nav>
+    </div>
+</header>
+
+<main class="site-main">
+    <div id="view-tracker" class="app-grid">
+
+        <section class="panel picker-panel">
+            <div class="panel-header">
+                <h2>Rumors</h2>
+                <span class="pick-counter" id="pick-counter">0 / 6 selected</span>
+            </div>
+            <div id="rumor-groups"></div>
+        </section>
+
+        <section class="panel stats-panel">
+            <div class="panel-header">
+                <h2>Set Analysis</h2>
+                <button class="btn btn-ghost" id="clear-btn" hidden>Clear</button>
+            </div>
+
+            <div id="analysis" hidden>
+                <div id="stats-content"></div>
+                <div class="save-row">
+                    <input class="text-input" id="set-name" maxlength="60" placeholder="Set name">
+                    <button class="btn btn-primary" id="save-btn" disabled>Save Set</button>
+                </div>
+            </div>
+
+            <div class="panel-header saved-header">
+                <h2>Saved Sets</h2>
+            </div>
+            <ul class="saved-list" id="saved-list"></ul>
+        </section>
+
+    </div>
+    <section id="view-settings" class="panel settings-panel" hidden>
+        <div class="panel-header">
+            <h2>Rumor Data</h2>
+            <span class="settings-actions">
+                <span class="chip chip-customized" id="customized-chip" hidden>customized</span>
+                <button class="btn btn-ghost btn-danger" id="reset-btn">Reset to defaults</button>
+            </span>
+        </div>
+
+        <div class="confirm-bar" id="confirm-bar" hidden>
+            <span>Throw away all your edits and restore the built-in rumor list?</span>
+            <button class="btn btn-primary btn-danger-solid" id="confirm-reset-btn">Yes, reset</button>
+            <button class="btn btn-ghost" id="cancel-reset-btn">Cancel</button>
+        </div>
+
+        <div id="settings-groups"></div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    Not affiliated with Grinding Gear Games.
+</footer>
+
+<script src="./app.js?v=__BUILD__" defer></script>
+</body>
+</html>
